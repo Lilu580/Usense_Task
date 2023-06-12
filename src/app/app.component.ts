@@ -47,32 +47,5 @@ export class AppComponent {
         strengthSections[0].classList.add('red');
       }
     }
-
-
-
-    // if (/[a-zA-Z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*]/.test(password)) {
-    //   strengthSections.forEach(section => {
-    //     section.classList.add('green');
-    //   });
-    // } else if(password.length < 8) {
-    //   if(password.length === 0) {
-    //     strengthSections.forEach(section => {
-    //       section.classList.remove('red', 'yellow', 'green');
-    //       section.classList.add('gray');
-    //     });
-    //   } else {
-    //     strengthSections.forEach(section => {
-    //       section.classList.add('red');
-    //     });
-    //   }
-    // } else if ((/[a-zA-Z]/.test(password) && /[0-9]/.test(password)) || (/[a-zA-Z]/.test(password) && /[!@#$%^&*]/.test(password)) || (/[0-9]/.test(password) && /[!@#$%^&*]/.test(password))) {
-    //   strengthSections[0].classList.remove('gray');
-    //   strengthSections[0].classList.add('yellow');
-    //   strengthSections[1].classList.add('yellow');
-    // } else if (password.length === 0){
-    // } else {
-    //   strengthSections[0].classList.remove('gray');
-    //   strengthSections[0].classList.add('red');
-    // }
   }
 }
