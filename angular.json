@@ -99,6 +99,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/usense-task",
+            "netlifyToken": "R_uJeTD0WMyqIa3JWdHq1cg4pqLM5a8w6mHuJ8iQYpc",
+            "siteId": "1d835981-ecc9-47a1-8af3-537c42bad129"
+          }
         }
       }
     }
