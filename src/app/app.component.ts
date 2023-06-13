@@ -12,6 +12,10 @@ export class AppComponent {
   checkPasswordStrength() {
     const password = this.password;
     let strengthSections = document.querySelectorAll('.section');
+    const charsPattern = new RegExp(/[a-zA-Z]/);
+    const numbersPattern = new RegExp(/[0-9]/);
+    const symbolsPattern = new RegExp(/[!@#$%^&*]/);
+    const passwordLength = password.length;
 
     const removeColors = (index: number) => {
       strengthSections[index].classList.remove('gray','red', 'yellow', 'green');
@@ -22,21 +26,21 @@ export class AppComponent {
       section.classList.add('gray');
     });
 
-    if (password.length < 8 && password.length !== 0) {
+    if (passwordLength < 8 && passwordLength !== 0) {
       strengthSections.forEach((section,index) => {
         removeColors(index);
         section.classList.add('red');
       });
-    } else if(password.length !== 0) {
-      if (/[a-zA-Z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*]/.test(password)) {
+    } else if(passwordLength !== 0) {
+      if (charsPattern.test(password) && numbersPattern.test(password) && symbolsPattern.test(password)) {
         strengthSections.forEach((section, index) => {
           removeColors(index);
           section.classList.add('green');
         });
       } else if (
-          (/[a-zA-Z]/.test(password) && /[0-9]/.test(password))
-          || (/[a-zA-Z]/.test(password) && /[!@#$%^&*]/.test(password))
-          || (/[0-9]/.test(password) && /[!@#$%^&*]/.test(password))
+          (charsPattern.test(password) && numbersPattern.test(password))
+          || (charsPattern.test(password) && symbolsPattern.test(password))
+          || (numbersPattern.test(password) && symbolsPattern.test(password))
           ) {
         removeColors(0);
         removeColors(1)
