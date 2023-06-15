@@ -8,10 +8,16 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PasswordInputComponent } from './password-input/password-input.component';
+import { SectionItemComponent } from './section-item/section-item.component';
+import { SectionListComponent } from './section-list/section-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PasswordInputComponent,
+    SectionItemComponent,
+    SectionListComponent
   ],
   imports: [
     BrowserModule,

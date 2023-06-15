@@ -1,14 +1,4 @@
 <div class="container">
-  <mat-form-field>
-    <mat-label>Enter your password</mat-label>
-    <input [(ngModel)]="password" (ngModelChange)="checkPasswordStrength()" matInput [type]="hide ? 'password' : 'text'">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
-  </mat-form-field>
-  <div class="sectionsContainer">
-    <div class="section"></div>
-    <div class="section"></div>
-    <div class="section"></div>
-  </div>
+  <app-password-input></app-password-input>
+  <app-section-list></app-section-list>
 </div>
